@@ -18,6 +18,12 @@ app.get("/notes", function(req, res) {
   res.sendFile(path.join(__dirname, "notes.html"));
 });
 
+// api notes
+app.get("/api/notes", function(req, res) {
+  return res.json(notes);
+});
+
+
 
 // A function for getting all notes from the db
 const getNotes = () => {
