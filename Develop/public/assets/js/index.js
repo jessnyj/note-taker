@@ -7,6 +7,13 @@ const $noteList = $(".list-container .list-group");
 // activeNote is used to keep track of the note in the textarea
 let activeNote = {};
 
+// routes/redirects
+// index.html
+app.get("/", function(req, res) {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
+
+
 // A function for getting all notes from the db
 const getNotes = () => {
   return $.ajax({
