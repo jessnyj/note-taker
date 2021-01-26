@@ -23,51 +23,40 @@ app.get("/notes", function (req, res) {
     res.sendFile(path.join(__dirname, 'public', 'notes.html'));
 });
 
-// index.html
-app.get("*", function (req, res) {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
-
 
 // api notes
 app.get('/api/notes', (req, res) => {
-    fs.readFile("db/db.json", (err, data) => {
-        if (err) throw err;
+    console.log("it works");
+    const data = fs.readFileSync("db/db.json", {encoding: "utf8"});
+        console.log("it is reading");
         var newData = JSON.parse(data);
         return res.json(newData);
     })
-});
+
 
 // post api/notes
 app.post('/api/notes', (req, res) => {
     var newNote = req.body;
+    console.log("api notes");
     console.log(newNote);
     fs.readFile("db/db.json", (err, data) => {
+        console.log(data);
         if (err) throw err;
-        console.log(data.title);
+        var newData = JSON.parse(data);
+        newData.push(newNote);
+        console.log(newData);
+        // console.log(data.title);
 
 
-        fs.writeFile("db/db.json", JSON.stringify(data, '\t'), (err) => {
+        fs.writeFile("db/db.json", JSON.stringify(newData), (err) => {
             if (err) throw err;
-            return console.log(data.title);
-
-        })
+            
+        });
+        // res.json(JSON.parse(newData));
 
     })
 
 });
-
-
-// var tempArray = [];
-// tempArray.push(newNote);
-// fs.writeFile.push(tempArray);
-
-// var tempArray = [];
-// // tempArray.push(newNote);
-// {
-
-//     fs.writeFile.push(tempArray);
-// })
 
 
 
@@ -84,6 +73,10 @@ app.delete("/api/notes/:id", (req, res) => {
     res.send("note removed")
 });
 
+// index.html
+app.get("*", function (req, res) {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 
 // start server
 app.listen(PORT, () => {
