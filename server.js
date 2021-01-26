@@ -42,18 +42,34 @@ app.get('/api/notes', (req, res) => {
 app.post('/api/notes', (req, res) => {
     var newNote = req.body;
     console.log(newNote);
-    fs.readFile("db/db.json", (err,data) => {
+    fs.readFile("db/db.json", (err, data) => {
         if (err) throw err;
-        console.log(data);
+        console.log(data.title);
+
+
+        fs.writeFile("db/db.json", JSON.stringify(data, '\t'), (err) => {
+            if (err) throw err;
+            return console.log(data.title);
+
+        })
+
     })
-    var tempArray = [];
-    tempArray.push(newNote);
-    fs.writeFile("db/db.json", (err,data) => {
-        if (err) throw err;
-        fs.writeFile.push(tempArray);
-    })
-        // notes.push(newNote);
+
 });
+
+
+// var tempArray = [];
+// tempArray.push(newNote);
+// fs.writeFile.push(tempArray);
+
+// var tempArray = [];
+// // tempArray.push(newNote);
+// {
+
+//     fs.writeFile.push(tempArray);
+// })
+
+
 
 // api/delete/note
 app.delete("/api/notes/:id", (req, res) => {
