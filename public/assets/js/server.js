@@ -1,29 +1,32 @@
 // dependencies
-var express = require("express");
-var path = require("path")
+const express = require('express');
+const path = require('path');
 
 // set up express
-var app = express();
-var PORT = process.env.PORT || 3000;
+const app = express();
+const PORT = process.env.PORT || 3000;
 
 // handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// note and new notes arrays
+// Set static folder
+app.use(express.static(path.join(__dirname, 'public')));
+
+// notes array
 var notes = [];
 
 
 // routes/redirects
 // index.html
-app.get("*", function (req, res) {
-    res.sendFile(path.join(__dirname, "index.html"));
-});
+// app.get("*", function (req, res) {
+//     res.sendFile(path.join(__dirname, 'public', 'index.html'));
+// });
 
 // notes.html
-app.get("/notes", function (req, res) {
-    res.sendFile(path.join(__dirname, "notes.html"));
-});
+// app.get("/notes", function (req, res) {
+//     res.sendFile(path.join(__dirname, 'public', 'notes.html'));
+// });
 
 // api notes
 app.get("/api/notes", function (req, res) {
