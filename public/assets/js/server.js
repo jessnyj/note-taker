@@ -29,12 +29,12 @@ var notes = [];
 // });
 
 // api notes
-app.get("/api/notes", function (req, res) {
+app.get('/api/notes', (req, res) => {
     return res.json(notes);
 });
 
 // post api/notes
-app.post("/api/notes", function (req, res) {
+app.post('/api/notes', (req, res) => {
     var newNote = req.body;
     console.log(newNote);
     if (notes.length < 5) {
@@ -47,7 +47,7 @@ app.post("/api/notes", function (req, res) {
 });
 
 // api/delete/note
-app.delete("/api/notes/:id", function (req, res) {
+app.delete("/api/notes/:id", (req, res) => {
     var index = req.body.index;
     var temp = [];
     for (var i = 0; i < notes.length; i++) {
@@ -60,6 +60,6 @@ app.delete("/api/notes/:id", function (req, res) {
 });
 
 // start server
-app.listen(PORT, function() {
+app.listen(PORT, () => {
     console.log("App listening on PORT " + PORT)
 })
