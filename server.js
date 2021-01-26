@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // set static folder
-// app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // notes array
 var notes = [];
@@ -42,12 +42,16 @@ app.get('/api/notes', (req, res) => {
 app.post('/api/notes', (req, res) => {
     var newNote = req.body;
     console.log(newNote);
-    fs.readFile(db.json)
-    // push newNote to
-    // temp array 
-
-    // take temp array and push to fswritefile
-    fs.writeFile
+    fs.readFile("db/db.json", (err,data) => {
+        if (err) throw err;
+        console.log(data);
+    })
+    var tempArray = [];
+    tempArray.push(newNote);
+    fs.writeFile("db/db.json", (err,data) => {
+        if (err) throw err;
+        fs.writeFile.push(tempArray);
+    })
         // notes.push(newNote);
 });
 
