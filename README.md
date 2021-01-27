@@ -20,6 +20,8 @@ Please check out the deployed site.
 * [Site]()
 
 ## Site Picture
+![Site](./images/note-one.png)
+![Site](./Assets/note-two.png)
 
 ## Technologies Used
 * HTML5
