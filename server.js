@@ -39,7 +39,7 @@ app.post("/api/notes", (req, res) => {
             const noteCard = {
                 title: newData[i].title,
                 text: newData[i].text,
-                id: (i + 1),
+                id: i,
             };
             notes.push(noteCard);
         }
