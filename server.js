@@ -14,7 +14,6 @@ app.use(express.json());
 // set static folder
 app.use(express.static(path.join(__dirname, 'public')));
 
-
 // notes.html
 app.get("/notes", function (req, res) {
     res.sendFile(path.join(__dirname, 'public', 'notes.html'));
@@ -40,7 +39,7 @@ app.post("/api/notes", (req, res) => {
             const noteCard = {
                 title: newData[i].title,
                 text: newData[i].text,
-                id: i + 1,
+                id: (i + 1),
             };
             notes.push(noteCard);
         }
@@ -64,7 +63,7 @@ app.delete("/api/notes/:id", (req, res) => {
                     title: newData[i].title,
                     text: newData[i].text,
                     id: notes.length,
-                };
+                }
                 notes.push(noteCard);
             }
         }
