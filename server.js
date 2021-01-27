@@ -52,7 +52,7 @@ app.post('/api/notes', (req, res) => {
             if (err) throw err;
             
         });
-        // res.json(JSON.parse(newData));
+    
 
     })
 
