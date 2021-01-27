@@ -21,7 +21,7 @@ Please check out the deployed site.
 
 ## Site Picture
 ![Site](./images/note-one.png)
-![Site](./Assets/note-two.png)
+![Site](./images/note-two.png)
 
 ## Technologies Used
 * HTML5
