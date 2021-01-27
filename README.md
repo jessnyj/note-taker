@@ -2,9 +2,13 @@
 
 ![License](https://img.shields.io/badge/license-MIT-181717?style=for-the-badge) 
 
+## Deployed Link
+Please check out the deployed site.
+* [Site]()
+
 ## Table of Contents
 * [Title](#title)
-* [Demo](#deployed-link)
+* [Deployed Link](#deployed-link)
 * [Site Picture](#site-picture)
 * [Technologies Used](#technologies-used)
 * [Description](#description)
@@ -15,9 +19,6 @@
 * [Questions](#questions)
 * [Acknowledgments](#acknowledgments)
 
-## Deployed link
-Please check out the deployed site.
-* [Site]()
 
 ## Site Picture
 ![Site](./images/note-one.png)
