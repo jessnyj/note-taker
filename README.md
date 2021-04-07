@@ -3,36 +3,24 @@
 ![License](https://img.shields.io/badge/license-MIT-181717?style=for-the-badge) 
 
 ## Deployed Link
-Please check out the deployed site.
-* [Site](https://desolate-sierra-29002.herokuapp.com/)
+[Site](https://desolate-sierra-29002.herokuapp.com/)
 
 ## Table of Contents
-* [Title](#title)
-* [Deployed Link](#deployed-link)
-* [Site Picture](#site-picture)
-* [Technologies Used](#technologies-used)
-* [Description](#description)
-* [Work Involved](#work-involved)
-* [Code Snippet](#code-snippet)
-* [License](#license)
-* [Authors](#authors)
-* [Questions](#questions)
-* [Acknowledgments](#acknowledgments)
-
+||||
+|:-:|:-:|:-:|
+|[Table Contents](#table-of-contents)|[Deployed Link](#deployed-link)|[Technologies Used](#technologies-used)
+|[Description](#description)|[Work Involved](#work-involved)|[Code Snippet](#code-snippet)
+|[Site Picture](#site-picture)|[Authors](#authors)|[Acknowledgments](#acknowledgments)
 
 ## Site Picture
 ![Site](./images/note-one.png)
 ![Site](./images/note-two.png)
 
 ## Technologies Used
-* HTML5
-* CSS
-* javascript
-* NodeJS
-* Express
-* Heroku 
-* Bootstrap
-* Github
+|||||
+|:-:|:-:|:-:|:-:|
+|Express	|NodeJS |Javascript |HTML	
+|CSS	|Bootstrap |Heroku |Github
 
 ## Description
 This application allows a user to write, save, and delete notes. 
@@ -67,7 +55,6 @@ app.post("/api/notes", (req, res) => {
 })
 ```
 
-
 ## License
 This project is covered under MIT.
 
@@ -76,9 +63,7 @@ This project is covered under MIT.
 
 **Jessny Joseph** 
 
-## Questions 
-* [Github](https://github.com/jessnyj)
-* [LinkedIn](https://www.linkedin.com/in/jessny-joseph-361515201)
+[Github](https://github.com/jessnyj) | [LinkedIn](https://www.linkedin.com/in/jessny-joseph-361515201)
 
 ## Acknowledgments
-Trilogy Education Services
+I would like to thank the mentors and colleagues who helped inspire and improve upon this project.
